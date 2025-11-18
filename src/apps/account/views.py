@@ -11,7 +11,6 @@ def index(request):
             password = form.cleaned_data["password"]
             try :
                 login = Login.objects.get(identity=identity, password=password)
-                print("OKOK")
                 if (login.identity == identity) and (login.password == password) :
                     return redirect("index")
                 else :
@@ -20,4 +19,4 @@ def index(request):
                 print("Problème de saisie")
     else :
         form = Login_Form()
-    return render(request, "account/index.html" , context={"form":form})
+    return render(request, "account/index.html", context={"form":form})
