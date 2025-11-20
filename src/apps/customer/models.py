@@ -20,3 +20,6 @@ class Order_Cmd(models.Model):
     id_user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, unique=False)
     id_command = models.ForeignKey(Command, on_delete=models.SET_NULL, null=True, unique=True)
     id_payment = models.ForeignKey(Payment, on_delete=models.SET_NULL, null=True, unique=True)
+
+class Statement(models.Model):
+    pass

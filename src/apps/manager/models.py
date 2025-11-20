@@ -1,3 +1,10 @@
 from django.db import models
 
-# Create your models here.
+class Storage(models.Model):
+    pass
+
+class Store(models.Model):
+    pass
+
+class Debiting(models.Model):
+    pass
