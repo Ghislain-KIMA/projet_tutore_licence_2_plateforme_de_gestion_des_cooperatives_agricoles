@@ -16,10 +16,10 @@ class Payment(models.Model):
     payment_amount = models.FloatField(null=False)
 
 class Order_Cmd(models.Model):
-    date_payment = models.DateField(max_length=10, null=False, unique=False)
-    id_user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, unique=False)
-    id_command = models.ForeignKey(Command, on_delete=models.SET_NULL, null=True, unique=True)
-    id_payment = models.ForeignKey(Payment, on_delete=models.SET_NULL, null=True, unique=True)
+    date_payment = models.DateTimeField(max_length=10, null=False, unique=False)
+    id_user = models.OneToOneField(User, on_delete=models.SET_NULL, null=True)
+    id_command = models.OneToOneField(Command, on_delete=models.SET_NULL, null=True)
+    id_payment = models.OneToOneField(Payment, on_delete=models.SET_NULL, null=True)
 
 class Statement(models.Model):
-    pass
+    statement_tax = models.FloatField(null=False)

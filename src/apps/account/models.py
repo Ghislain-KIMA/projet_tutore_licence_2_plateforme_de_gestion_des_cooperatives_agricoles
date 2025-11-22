@@ -15,4 +15,3 @@ class Login(models.Model):
     password = models.CharField(max_length = 100, null=False)
     last_login = models.DateTimeField(max_length = 30, null = False)
     id_user = models.ForeignKey(User, on_delete = models.CASCADE, null=False)
-

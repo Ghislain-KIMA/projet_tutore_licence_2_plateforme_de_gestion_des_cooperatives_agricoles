@@ -1,6 +1,7 @@
 from django.db import models
 
 from apps.account.models import User
+# from apps.customer.models import Statement, Command
 
 class Product(models.Model):
     product_name = models.CharField(max_length=60, null=False)
@@ -30,7 +31,12 @@ class Waching(models.Model):
     id_user = models.ForeignKey(User, on_delete=models.CASCADE, null=False)
 
 class Delivery(models.Model):
-    pass
+    delivery_person = models.CharField(max_length=90, null=False)
+    delivery_sender = models.CharField(max_length=90, null=False)
 
 class Render_up(models.Model):
-    pass
+    render_up_date = models.DateTimeField(max_length=30, null=False)
+    id_statement = models.ForeignKey("customer.Statement", on_delete=models.CASCADE, null=False)
+    id_delivery = models.ForeignKey(Delivery, on_delete=models.PROTECT, null=False)
+    id_command = models.ForeignKey("customer.Command", on_delete=models.PROTECT, null=False)
+    id_user = models.ForeignKey(User, on_delete=models.PROTECT, null=False)
