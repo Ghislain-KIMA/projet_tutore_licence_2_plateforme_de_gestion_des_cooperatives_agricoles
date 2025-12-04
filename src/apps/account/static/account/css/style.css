@@ -6,7 +6,8 @@ html, body {
 
 body
 {
-  background-image: url("background.jpg");
+  /* background-image: url("background.jpg"); */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%), url(background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -18,8 +19,9 @@ body
 
 .connection-form
 {
-    background-color: #124015;
-    /* background-color: #b0e0e6; */
+    /* background-color: #124015; */
+    /* background: transparent; */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8)50%, rgba(0, 0, 0, 0.8)50%);
     color: #fff;
     padding: 30px;
     border-radius: 10px;
