@@ -7,6 +7,7 @@ projet_tutore.pdf
 
 # Files end with
 *.bkp
+*.drawio
 
 # Folders
 env/
