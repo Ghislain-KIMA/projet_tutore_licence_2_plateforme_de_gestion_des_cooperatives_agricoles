@@ -90,7 +90,7 @@ WSGI_APPLICATION = 'pgca.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'pgca_dev_ghisma_2025',
+        'NAME': 'pgca_app_database_2025',
         'USER': 'pgca_app_user_2025',
         'PASSWORD': '6425pgcaUneapp100',
         'HOST': 'localhost',
